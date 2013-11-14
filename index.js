@@ -14,7 +14,7 @@ function nodesMatching(query, nodes){
   var matching = [];
   for (var i = 0, len = nodes.length; i < len; i++){
     var n = nodes[i];
-    if (matches(n, query)) {
+    if (n.nodeType != 3 && matches(n, query)) {
       matching.push(n);
     }
   }
